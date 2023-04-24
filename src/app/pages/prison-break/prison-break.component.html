@@ -1,0 +1,111 @@
+<div class="row">
+  <div class="col-md-6">
+    <h1>Problem</h1>
+    <p>
+      Alfie was a prisoner in mythland. Though Alfie was a witty and intelligent
+      guy.He was confident of escaping prison.After few days of observation,He
+      figured out that the prison consists of <code>(N x N)</code> cells.i.e The
+      shape of prison was <code>(N x N)</code> matrix. Few of the cells of the
+      prison contained motion detectors.So Alfie planned that while escaping the
+      prison he will avoid those cells containing motion detectors.Yet before
+      executing his plan,Alfie wants to know the total number of unique possible
+      paths which he can take to escape the prison.Initially Alfie is in cell
+      <code>(1, 1)</code> while the exit of the cell <code>(N x N)</code>.
+    </p>
+    <p>
+      note:->Alfie can move in all four direction if his current location is
+      <code>(X, Y)</code>, he can move to either:
+    </p>
+    <p>
+      <code>(X + 1, Y)</code>, <code>(X - 1, Y)</code>, <code>(X, Y + 1)</code>,
+      <code>(X, Y - 1)</code>.
+    </p>
+    <p>
+      If the first cell <code>(1, 1)</code> or the last cell<code>(N, N)</code>
+      contain motion detectors,then Alfie can't break out of the prison.
+    </p>
+
+    <p>
+      <strong>INPUT:</strong>
+    </p>
+
+    Provide the Matrix with separated values either 0 or 1. "1" represents a
+    cell containing motion detectors.
+
+    <code>
+      0 1 1 0
+      <br />
+      0 0 1 0
+      <br />
+      0 0 0 0
+      <br />
+      0 1 1 0
+    </code>
+    <br />
+    <br />
+
+    <p>
+      <strong> OUTPUT:</strong>
+    </p>
+
+    output total number of unique possible paths which he can take to escape the
+    prison.
+
+    <code>
+      <br />
+      0 1 1 0
+      <br />
+      0 0 1 0
+      <br />
+      0 0 0 0
+      <br />
+      0 1 1 0
+      <br />
+    </code>
+    <p>
+      <strong>2 posible ways</strong>
+    </p>
+    <code>
+      0 0 0 1
+      <br />
+      0 0 0 0
+      <br />
+      1 1 1 0
+      <br />
+      0 0 0 0
+      <br />
+    </code>
+    <p>
+      <strong>Can't leave prison</strong>
+    </p>
+    <code>
+      0 0 0 0
+      <br />
+      0 0 0 0
+      <br />
+      1 1 1 0
+      <br />
+      1 0 0 0
+      <br />
+    </code>
+    <p>
+      <strong>Can't leave prison</strong>
+    </p>
+    <code>
+      0 1 1 0
+      <br />
+      0 0 1 1
+      <br />
+      0 0 0 0
+      <br />
+      0 1 0 0
+      <br />
+    </code>
+    <p>
+      <strong>4 posible ways</strong>
+    </p>
+  </div>
+  <div class="col-md-6 border-start">
+    <h1>Solution</h1>
+  </div>
+</div>

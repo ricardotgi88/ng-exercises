@@ -10,6 +10,8 @@ import { TopMenuComponent } from './components/top-menu/top-menu.component';
 import { ProductDetailComponent } from './pages/produtos/product-detail/product-detail.component';
 import { AubayComponentsModule } from 'aubay-components';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MaxOperationCountComponent } from './pages/max-operation-count/max-operation-count.component';
+import { PrisonBreakComponent } from './pages/prison-break/prison-break.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     DefaultLayoutComponent,
     TopMenuComponent,
     ProductDetailComponent,
+    MaxOperationCountComponent,
+    PrisonBreakComponent,
   ],
   imports: [
     BrowserModule,
