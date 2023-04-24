@@ -1,0 +1,49 @@
+<form [formGroup]="form">
+  <div class="mb-3 row card">
+    <label for="inputName" class="col-sm-2 col-form-label">Nome</label>
+    <div class="col-sm-10">
+      <input
+        type="text"
+        class="form-control"
+        id="inputName"
+        formControlName="name"
+      />
+
+      <div class="invalid-feedback" [class.d-block]="displayError('name', 'required')">
+        <span>Campo Obrigatorio</span>
+      </div>
+      <div class="invalid-feedback" [class.d-block]="displayError('name', 'minlength')">
+        <span>Tamanho minimo nao atingido</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="inputValue" class="col-sm-2 col-form-label">valor</label>
+    <div class="col-sm-10">
+      <input
+        type="number"
+        class="form-control"
+        id="inputValue"
+        formControlName="price"
+      />
+    </div>
+
+    <!-- <ng-container formArrayName="lessons">
+
+    </ng-container> -->
+  </div>
+</form>
+
+<br />
+valor do form : {{ form.value | json }}
+
+<br />
+form é valido : {{ form.valid }}
+<br />
+erros do form : {{ form.errors | json }}
+
+<br />
+erros do nome : {{ form.controls['name'].errors | json }}
+<br />
+erros do preco : {{ form.controls['price'].errors | json }}
