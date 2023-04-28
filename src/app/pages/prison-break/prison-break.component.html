@@ -108,35 +108,48 @@
   <div class="col-md-6 border-start">
     <h1>Solution</h1>
 
-
-<section>
-
-  <form [formGroup]="form">
-    <div formArrayName="rows">
-      <div *ngFor="let row  of rows.controls; let i = index" class="">
-        <div formArrayName="{{i}}" class="d-flex flex-row w-100">
-
-          <div *ngFor="let col of getRowArray(i).controls let j = index" class="p-2" >
-            <input [formControlName]="j" class="w-100"  />
+    <section>
+      <form [formGroup]="form">
+        <div formArrayName="rows">
+          <div *ngFor="let row of rows.controls; let i = index" class="">
+            <div formArrayName="{{ i }}" class="d-flex flex-row w-100">
+              <div
+                *ngFor="let col of getRowArray(i).controls; let j = index"
+                class="p-2"
+              >
+                <input [formControlName]="j" class="w-100" />
+              </div>
+            </div>
           </div>
         </div>
+        <div class="d-flex flex-row w-100">
+          <button
+            type="button"
+            (click)="addCells()"
+            class="btn btn-primary m-1"
+          >
+            Add Row
+          </button>
+          <button
+            type="button"
+            (click)="initialiseForm()"
+            class="btn btn-warning m-1"
+          >
+            Reset
+          </button>
+          <button
+            type="button"
+            (click)="onSubmit()"
+            class="btn btn-success m-1"
+          >
+            Calculate Escape Path
+          </button>
+        </div>
+      </form>
+
+      <div class="mt-4">
+        <h5>Escape Path is: {{ escapePath }}</h5>
       </div>
-    </div>
-    <div class="d-flex">
-
-      <button type="button" (click)="addCells()" class="btn btn-primary m-1">Add Row</button>
-      <button type="button" (click)="initialiseForm()" class="btn btn-warning m-1">Reset</button>
-      <button type="button" (click)="onSubmit()" class="btn btn-success m-1">Calculate Escape Path</button>
-    </div>
-
-  </form>
-
-  <div>
-    <p>Escape Path is: {{escapePath}}</p>
-  </div>
-
-
-</section>
-
+    </section>
   </div>
 </div>
