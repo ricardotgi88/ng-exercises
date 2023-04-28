@@ -113,11 +113,11 @@
 
   <form [formGroup]="form">
     <div formArrayName="rows">
-      <div *ngFor="let row  of rows.controls; let i = index">
-        <div formArrayName="{{i}}">
-          <p> Row: {{i}}</p>
-          <div *ngFor="let col of getRowArray(i).controls let j = index">
-            <input [formControlName]="j" />
+      <div *ngFor="let row  of rows.controls; let i = index" class="">
+        <div formArrayName="{{i}}" class="d-flex flex-row w-100">
+
+          <div *ngFor="let col of getRowArray(i).controls let j = index" class="p-2" >
+            <input [formControlName]="j" class="w-100"  />
           </div>
         </div>
       </div>
