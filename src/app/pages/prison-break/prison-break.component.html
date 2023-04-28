@@ -122,9 +122,18 @@
         </div>
       </div>
     </div>
-    <button type="button" (click)="addCells()">Add Row</button>
+    <div class="d-flex">
+
+      <button type="button" (click)="addCells()" class="btn btn-primary m-1">Add Row</button>
+      <button type="button" (click)="initialiseForm()" class="btn btn-warning m-1">Reset</button>
+      <button type="button" (click)="calculateEscapePath()" class="btn btn-success m-1">Calculate Escape Path</button>
+    </div>
+
   </form>
 
+  <div>
+    <p>Escape Path is: {{escapePath}}</p>
+  </div>
 
 
 </section>

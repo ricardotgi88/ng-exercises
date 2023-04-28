@@ -9,12 +9,16 @@ import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
 })
 export class PrisonBreakComponent implements OnInit {
 
-  form: FormGroup;
+  form!: FormGroup;
   matrix: number[][] = [];
   matrixCount  = 0;
   escapePath = 0;
 
   constructor(private fb: FormBuilder) {
+   this.initialiseForm()
+  }
+  initialiseForm() {
+
     this.form = this.fb.group({
       rows: this.fb.array([
 
