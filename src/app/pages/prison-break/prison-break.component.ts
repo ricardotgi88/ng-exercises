@@ -16,7 +16,10 @@ export class PrisonBreakComponent {
 
   initialiseForm() {
     this.form = this.fb.group({
-      rows: this.fb.array([this.fb.array([this.fb.control('')])]),
+      rows: this.fb.array([
+        this.fb.array([this.fb.control(''), this.fb.control('')]),
+        this.fb.array([this.fb.control(''), this.fb.control('')]),
+      ]),
     });
   }
   onSubmit(): void {
