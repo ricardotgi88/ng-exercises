@@ -117,7 +117,11 @@
                 *ngFor="let col of getRowArray(i).controls; let j = index"
                 class="p-2"
               >
-                <input [formControlName]="j" class="w-100" />
+                <input
+                  [formControlName]="j"
+                  class="w-100"
+                  data-testid="cellInputs"
+                />
               </div>
             </div>
           </div>
@@ -127,13 +131,15 @@
             type="button"
             (click)="addCells()"
             class="btn btn-primary m-1"
+            data-testid="addCells"
           >
-            Add Row
+            Add Cells
           </button>
           <button
             type="button"
             (click)="initialiseForm()"
             class="btn btn-warning m-1"
+            data-testid="resetButton"
           >
             Reset
           </button>
@@ -141,6 +147,7 @@
             type="button"
             (click)="onSubmit()"
             class="btn btn-success m-1"
+            data-testid="calculateEscapePathButton"
           >
             Calculate Escape Path
           </button>
@@ -148,7 +155,7 @@
       </form>
 
       <div class="mt-4">
-        <h5>Escape Path is: {{ escapePath }}</h5>
+        <h5 data-testid="escapePath">Escape Path is: {{ escapePath }}</h5>
       </div>
     </section>
   </div>
