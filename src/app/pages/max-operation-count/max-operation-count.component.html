@@ -2,8 +2,9 @@
   <div class="col-md-6">
     <h1>Problem</h1>
     <p>
-      We have given an array of integers of size <code>N</code> and a positive integer (Breakeven) . We can
-      perform as many operations on the array till it has at least two elements.
+      We have given an array of integers of size <code>N</code> and a positive
+      integer (Breakeven) . We can perform as many operations on the array till
+      it has at least two elements.
     </p>
     <p>
       The operation is as follows:
@@ -24,11 +25,63 @@
     <strong>Output format</strong>
     <p>Print the maximum possible number of operations.</p>
 
-    <img class="w-100" alt="constraints"
+    <img
+      class="w-100"
+      alt="constraints"
       src="data:image/png;base64,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"
     />
   </div>
   <div class="col-md-6 border-start">
     <h1>Solution</h1>
+    <form [formGroup]="form">
+      <div class="form-group">
+        <label for="breakEven">Breakeven</label>
+        <input
+          type="number"
+          class="form-control"
+          id=""
+          placeholder=""
+          [formControl]="breakEven"
+        />
+      </div>
+
+      <div formArrayName="numbers" class="form-group">
+        <label>Numbers</label>
+
+        <div class="d-flex flex-row w-100">
+          <div *ngFor="let item of numbers.controls; let i = index" class="">
+            <input [formControlName]="i" class="form-control" type="text" />
+          </div>
+        </div>
+
+        <div class="d-flex flex-row w-100">
+          <button
+            type="button"
+            (click)="addNumber()"
+            class="btn btn-primary m-1"
+            data-testid="addCells"
+          >
+            Add Cells
+          </button>
+          <button
+            type="button"
+            (click)="initialiseForm()"
+            class="btn btn-warning m-1"
+            data-testid="resetButton"
+          >
+            Reset
+          </button>
+          <button
+            type="button"
+            (click)="onSubmit()"
+            class="btn btn-success m-1"
+            data-testid="calculateEscapePathButton"
+          >
+            Calculate Escape Path
+          </button>
+        </div>
+      </div>
+    </form>
+    <p>Max Operations is {{ maxNumberOfOperations }}</p>
   </div>
 </div>
