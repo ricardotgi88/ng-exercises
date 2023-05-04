@@ -16,13 +16,7 @@ export class MaxOperationCountComponent {
     this.maxNumberOfOperations = 0;
     this.form = this.fb.group({
       breakEven: this.fb.control(''),
-      numbers: this.fb.array([
-        this.fb.control(''),
-        this.fb.control(''),
-        this.fb.control(''),
-        this.fb.control(''),
-        this.fb.control(''),
-      ]),
+      numbers: this.fb.array([this.fb.control(''), this.fb.control('')]),
     });
   }
 
