@@ -50,7 +50,12 @@
 
         <div class="d-flex flex-row w-100">
           <div *ngFor="let item of numbers.controls; let i = index" class="">
-            <input [formControlName]="i" class="form-control" type="text" />
+            <input
+              [formControlName]="i"
+              class="form-control"
+              type="text"
+              data-testid="cellInputs"
+            />
           </div>
         </div>
 
@@ -75,13 +80,16 @@
             type="button"
             (click)="onSubmit()"
             class="btn btn-success m-1"
-            data-testid="calculateEscapePathButton"
+            data-testid="calculateMaxOperation"
           >
-            Calculate Escape Path
+            Calculate Max Operation
           </button>
         </div>
       </div>
     </form>
-    <p>Max Operations is {{ maxNumberOfOperations }}</p>
+    <p>
+      Max Operations is
+      <span data-testid="displayedOutput">{{ maxNumberOfOperations }}</span>
+    </p>
   </div>
 </div>
