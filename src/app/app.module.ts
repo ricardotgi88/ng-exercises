@@ -8,7 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductComponent } from './pages/produtos/product/product.component';
 import { TopMenuComponent } from './components/top-menu/top-menu.component';
 import { ProductDetailComponent } from './pages/produtos/product-detail/product-detail.component';
-import { AubayComponentsModule } from 'aubay-components';
+import { AubayComponentsModule } from '../../projects/aubay-components/src/public-api';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaxOperationCountComponent } from './pages/max-operation-count/max-operation-count.component';
 import { PrisonBreakComponent } from './pages/prison-break/prison-break.component';
